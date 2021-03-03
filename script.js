@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-var galleryThumbs = new Swiper('.gallery-thumbs', {
+  var galleryThumbs = new Swiper('.portfolio-gallery-thumbs ', {
     spaceBetween: 10,
     slidesPerView: 4,
     freeMode: true,
@@ -8,7 +8,9 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     watchSlidesProgress: true,
     direction: "vertical",
   });
-  var galleryTop = new Swiper('.gallery-top', {
+
+  var galleryTop = new Swiper('.portfolio-gallery-top', {
+    slidesPerView: 1,
     spaceBetween: 0,
     navigation: {
       nextEl: '.swiper-button-next',
@@ -16,10 +18,10 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     },
     thumbs: {
       swiper: galleryThumbs,
-    }
+    },
   });
 
-  let mySwiperS = new Swiper('.swiper-container.second-swiper', {
+  let mySwiperS = new Swiper('.second-swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
@@ -32,7 +34,7 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
     },
   });
 
-//////////             side bar menu           ///////////////
+//////////         side bar menu           ///////////////
 var menuButton = document.querySelector('.menu-button');
   var openMenu = function () {
     swiper.slidePrev();
@@ -61,18 +63,7 @@ var menuButton = document.querySelector('.menu-button');
     }
   });
 
-/////////////                 clean input           /////////////
-  document.querySelector(".contact_name").onclick = function(){
-    document.querySelector(".contact_name").value = "";
-  }
-  document.querySelector(".contact_surname").onclick = function(){
-    document.querySelector(".contact_surname").value = "";
-  }
-  document.querySelector(".contact_textarea").onclick = function(){
-    document.querySelector(".contact_textarea").value = "";
-  }
-
-//////////////                  modal_order_call            ///////////////////////////
+//////////////            modal_order_call            ///////////////////////////
   $(document).ready(function(){
       $(".modal_order_call-bg").hide();
       // show Map Modal window
@@ -92,7 +83,7 @@ var menuButton = document.querySelector('.menu-button');
   });
 
 
-//////////////                  modal_request             ///////////////////////////
+//////////////           modal_request             ///////////////////////////
   $(document).ready(function(){
     $(".modal_request-bg").hide();
     // show Map Modal window
@@ -112,7 +103,7 @@ var menuButton = document.querySelector('.menu-button');
 
   });
 
-  // Map Modal window
+//////        Map Modal window   /////////////////
   $(document).ready(function(){
     $(".map_box").hide();
     // show Map Modal window
@@ -132,23 +123,21 @@ var menuButton = document.querySelector('.menu-button');
   });
 
   //////////         show elements          ////////
-if (window.matchMedia("(min-width: 768px)").matches) {
-  $(function () {
-    var jqBar = $('.work_stages');
-    var Status = true;
-    $(window).scroll(function() {
-      var scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
-      if (scrollEvent && Status) { 
-        Status = false;
-        $('.work_stages-box_stages_num .work_stages-box_stages-item:eq(0)').animate({width: "toggle"}, 300, function(){
-          $(this).next().animate({width: "toggle"}, 300, arguments.callee);
-        });
-      }
+  if (window.matchMedia("(min-width: 769px)").matches) {
+    $(function () {
+      var jqBar = $('.work_stages');
+      var Status = true;
+      $(window).scroll(function() {
+        var scrollEvent = ($(window).scrollTop() > (jqBar.position().top - $(window).height()));
+        if (scrollEvent && Status) { 
+          Status = false;
+          $('.work_stages-box_stages_num .work_stages-box_stages-item:eq(0)').animate({width: "toggle"}, 300, function(){
+            $(this).next().animate({width: "toggle"}, 300, arguments.callee);
+          });
+        }
+      });
     });
-  });
-} else {
-};
-  
+  };
 });
 
 // Initialize and add map

@@ -417,13 +417,15 @@ html, body {
   box-shadow: 1px 1px 18px 4px rgba(255, 153, 0, 0.32);
 }
 .swiper-container .main_slider .main_center-block {
-  padding: 130px 0;
+  height: 100%;
 }
 .swiper-container .main_slider .main_center-block .main_center-block_box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   max-width: 860px;
+  height: 100%;
 }
 .swiper-container .main_slider .main_center-block .main_center-block_box .main_title {
   font-family: "Playfair Display", serif;
@@ -446,7 +448,11 @@ html, body {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.015em;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 45px;
   color: white;
   background: #ff9900;
   transition: all 0.3s ease;
@@ -688,7 +694,7 @@ html, body {
   justify-content: space-between;
 }
 .main .header .header_menu .header_logo .header_logo_text {
-  font-family: Gilroy-Bold;
+  font-family: "Gilroy-Bold";
   font-size: 24px;
   line-height: 80px;
   color: #ff9900;
@@ -766,7 +772,11 @@ html, body {
   font-size: 16px;
   line-height: 19px;
   letter-spacing: -0.015em;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 45px;
   color: white;
   background: #ff9900;
   transition: all 0.3s ease;
@@ -816,6 +826,7 @@ html, body {
 }
 .about_us .about_us-left {
   position: relative;
+  width: 50%;
 }
 @media (max-width: 1024px) {
   .about_us .about_us-left {
@@ -861,13 +872,11 @@ html, body {
   justify-content: center;
   width: 100%;
   padding: 0 15px;
-  background: url(../bilder/img/about_us_bg.png) center no-repeat;
-  background-position-x: 100%;
-  background-position-y: -400%;
+  background: url(../bilder/img/about_us_bg.png) bottom right no-repeat;
+  background-position-y: 300px;
 }
 @media (max-width: 1024px) {
   .about_us .about_us-right_box {
-    background-position-x: 50%;
     background-position-y: 50%;
   }
 }
@@ -972,6 +981,9 @@ html, body {
 .portfolio {
   position: relative;
   padding-top: 100px;
+  background: url(../bilder/img/pornfolio_bg.png) center no-repeat;
+  background-position-x: 30%;
+  background-position-y: 150%;
 }
 .portfolio .portfolio_head {
   display: flex;
@@ -989,6 +1001,9 @@ html, body {
   }
 }
 .portfolio .portfolio_box .portfolio_box-left_des {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 504px;
   margin: 0 auto;
   padding: 0 15px;
@@ -1051,8 +1066,7 @@ html, body {
     width: 100%;
   }
 }
-.portfolio .portfolio_box_slider-gallery .gallery_bottom .swiper-button-next,
-.portfolio .portfolio_box_slider-gallery .gallery_bottom .swiper-button-prev {
+.portfolio .portfolio_box_slider-gallery .gallery_bottom .swiper-button-gallery {
   color: white;
   font-size: 35px;
   margin-top: unset;
@@ -1066,12 +1080,6 @@ html, body {
   display: flex;
   flex-direction: row-reverse;
 }
-.portfolio .portfolio_box_slider-gallery .portfolio_box_slider .swiper-container {
-  width: 20%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .portfolio .portfolio_box_slider-gallery .portfolio_box_slider .swiper-slide {
   background-position: center center;
   background-size: cover;
@@ -1079,8 +1087,10 @@ html, body {
 .portfolio .portfolio_box_slider-gallery .portfolio_box_slider .gallery-top {
   width: 704px;
   height: 70vh;
+  cursor: grab;
 }
 .portfolio .portfolio_box_slider-gallery .portfolio_box_slider .gallery-thumbs {
+  width: 20%;
   height: 50%;
   box-sizing: border-box;
   padding: 10px 0;
@@ -1092,7 +1102,7 @@ html, body {
 }
 .portfolio .portfolio_box_slider-gallery .portfolio_box_slider .gallery-thumbs .swiper-slide {
   width: 100%;
-  height: 100%;
+  height: 33% !important;
   opacity: 0.4;
 }
 .portfolio .portfolio_box_slider-gallery .portfolio_box_slider .gallery-thumbs .swiper-slide-thumb-active {
@@ -1138,6 +1148,7 @@ html, body {
 }
 .reviews .reviews_box .second-swiper {
   width: 100%;
+  cursor: grab;
 }
 .reviews .reviews_box .second-swiper .swiper-wrapper .swiper-slide .reviews_client {
   font-family: "Gilroy";
@@ -1244,6 +1255,10 @@ html, body {
   padding: 5px;
   border-bottom: 1px solid white;
 }
+.contact .contact_dox .contact_form .contact_person .contact_name::placeholder,
+.contact .contact_dox .contact_form .contact_person .contact_surname::placeholder {
+  color: white;
+}
 @media (max-width: 564px) {
   .contact .contact_dox .contact_form .contact_person .contact_name,
 .contact .contact_dox .contact_form .contact_person .contact_surname {
@@ -1263,8 +1278,12 @@ html, body {
   resize: none;
   margin-bottom: 40px;
 }
+.contact .contact_dox .contact_form .contact_textarea::placeholder {
+  color: white;
+}
 .contact .contact_dox .contact_form .contact_form_send {
   border: none;
+  cursor: pointer;
   padding: 10px 20px;
   color: #ffb800;
   background: #FFFFFF;

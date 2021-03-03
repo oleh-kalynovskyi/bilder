@@ -140,11 +140,9 @@
 
             <div class="container">
             <div class="header_menu">
-                <div class="header_logo">
-                    <h1 class="header_logo_text">
-                        LOGO
-                    </h1>
-                </div>
+                <h1 class="header_logo">
+                    <a href="#" class="header_logo_text">LOGO</a>
+                </h1>
     
                 <nav class="header_main_menu">
                     <ul class="header_main_menu_list">
@@ -326,27 +324,26 @@
             </div>
             <div class="portfolio_box_slider-gallery">
                 <div class="portfolio_box_slider">
-                    <div class="swiper-container gallery-top">
+                    <div class="swiper-container gallery-top portfolio-gallery-top">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide" style="background-image:url(../bilder/img/slider1.png)"></div>
-                          <div class="swiper-slide" style="background-image:url(../bilder/img/slider2.png)"></div>                         
-                          <div class="swiper-slide" style="background-image:url(../bilder/img/slider3.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../bilder/img/slider1.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../bilder/img/slider2.png)"></div>
+                            <div class="swiper-slide" style="background-image:url(../bilder/img/slider3.png)"></div>
                         </div>
                     </div>
-                    <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-container gallery-thumbs portfolio-gallery-thumbs">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" style="background-image:url(../bilder/img/slider1.png)"></div>
                             <div class="swiper-slide" style="background-image:url(../bilder/img/slider2.png)"></div>                          
                             <div class="swiper-slide" style="background-image:url(../bilder/img/slider3.png)"></div>
-                            </div>
                         </div>
-                    <div>
+                    </div>
                 </div>
-            </div>
-            <div class="gallery_bottom">
-                <!-- <div class="swiper-pagination"></div> -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <div class="gallery_bottom">
+                    <div class="swiper-button-next swiper-button-gallery"></div>
+                    <div class="swiper-button-prev swiper-button-gallery"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
             </div>
         </div>
     </section>
@@ -401,10 +398,10 @@
             </div>
             <form class="contact_form" action="">
                 <div class="contact_person">
-                    <input class="contact_name" required type="text" name="" id="" value="Ім'я">
-                    <input class="contact_surname" required type="text" name="" id="" value="Прізвище">
+                    <input class="contact_name" required type="text" name="" id="" placeholder="Ім'я">
+                    <input class="contact_surname" required type="text" name="" id="" placeholder="Прізвище">
                 </div>
-                <textarea class="contact_textarea" name="" id="" cols="" rows="" value="">Ваше повідомлення</textarea>
+                <textarea class="contact_textarea" name="" id="" cols="" rows="" placeholder="Ваше повідомлення"></textarea>
                 <input class="contact_form_send" type="submit" name="" id="">
             </form>
         </div>

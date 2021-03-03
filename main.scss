@@ -428,12 +428,15 @@ html, body {
             }
         }
         .main_center-block {
-            padding: 130px 0;
+            height: 100%;
             .main_center-block_box {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                justify-content: center;
                 max-width: 860px;
+
+                height: 100%;
                 .main_title {
                     font-family: 'Playfair Display', serif;
                     font-size: 40px;
@@ -458,7 +461,11 @@ html, body {
                     line-height: 19px;
                     letter-spacing: -0.015em;
         
-                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 170px;
+                    height: 45px;
                     color: white;
                     background: rgba(255, 153, 0, 1) ;
                     transition: all .3s ease;
@@ -737,7 +744,7 @@ html, body {
             justify-content: space-between;
             .header_logo {
                 .header_logo_text {
-                    font-family: Gilroy-Bold;
+                    font-family: "Gilroy-Bold";
                     font-size: 24px;
                     line-height: 80px;
                     color: rgba(255, 153, 0, 1);
@@ -827,8 +834,12 @@ html, body {
                 font-size: 16px;
                 line-height: 19px;
                 letter-spacing: -0.015em;
-    
-                padding: 10px;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 170px;
+                height: 45px;
                 color: white;
                 background: rgba(255, 153, 0, 1) ;
                 transition: all .3s ease;
@@ -884,6 +895,7 @@ html, body {
     }
     .about_us-left {
         position: relative;
+        width: 50%;
         @media (max-width: 1024px) {
             display: none;
         }
@@ -931,12 +943,11 @@ html, body {
         justify-content: center;
         width: 100%;
         padding: 0 15px;
-
-        background: url(../bilder/img/about_us_bg.png) center no-repeat;
-        background-position-x: 100%;
-        background-position-y: -400%;
+        background: url(../bilder/img/about_us_bg.png) bottom right no-repeat;
+        // background-position-x: 100%;
+        background-position-y: 300px;
         @media (max-width: 1024px) {
-            background-position-x: 50%;
+            // background-position-x: 50%;
             background-position-y: 50%;
         }
         .about_us-right_text {
@@ -1045,6 +1056,10 @@ html, body {
 .portfolio {
     position: relative;
     padding-top: 100px;
+
+    background: url(../bilder/img/pornfolio_bg.png) center no-repeat;
+    background-position-x: 30%;
+    background-position-y: 150%;
     .portfolio_head {
         display: flex;
         flex-direction: column;
@@ -1059,6 +1074,10 @@ html, body {
             align-items: center;
         }
         .portfolio_box-left_des{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
             max-width: 504px;
             margin: 0 auto;
             padding: 0 15px;
@@ -1123,8 +1142,7 @@ html, body {
             @media (max-width: 768px) {
                 width: 100%;
             }
-            .swiper-button-next,
-            .swiper-button-prev {
+            .swiper-button-gallery {
                 color: rgb(255, 255, 255);
                 font-size: 35px;
                 margin-top: unset;
@@ -1134,47 +1152,41 @@ html, body {
             }
         }
         .portfolio_box_slider {
-             width: 100%;
-             height: 70vh;
+            width: 100%;
+            height: 70vh;
             display: flex;
             flex-direction: row-reverse;
-            .swiper-container {
-                width: 20%;
-                height: 300px;
-                margin-left: auto;
-                margin-right: auto;
-              }
-          
-              .swiper-slide {
-                background-position: center center;
-                background-size: cover;
-              }
-          
-              .gallery-top {
-                width: 704px;
-                height: 70vh;
-              }
-          
-              .gallery-thumbs {
-                height: 50%;
-                box-sizing: border-box;
-                padding: 10px 0;
+            .swiper-slide {
+            background-position: center center;
+            background-size: cover;
+            }
+        
+            .gallery-top {
+            width: 704px;
+            height: 70vh;
+            cursor: grab;
+            }
+        
+            .gallery-thumbs {
+            width: 20%;
+            height: 50%;
+            box-sizing: border-box;
+            padding: 10px 0;
                 @media (max-width: 768px) {
                     display: none;
                 }
-              }
-          
-              .gallery-thumbs .swiper-slide {
-                width: 100%;
-                height: 100%;
-                opacity: 0.4;
-              }
-          
-              .gallery-thumbs .swiper-slide-thumb-active {
-                opacity: 1;
-              }
-        }
+            }
         
+            .gallery-thumbs .swiper-slide {
+            width: 100%;
+            height: 33% !important;
+            opacity: 0.4;
+            }
+        
+            .gallery-thumbs .swiper-slide-thumb-active {
+            opacity: 1;
+            }
+        }
     }
 }
 
@@ -1215,6 +1227,7 @@ html, body {
         
         .second-swiper {
             width: 100%;
+            cursor: grab;
             .swiper-wrapper {
                 .swiper-slide {
                     .reviews_client {
@@ -1326,6 +1339,9 @@ html, body {
                     outline: none;
                     padding: 5px;
                     border-bottom: 1px solid white;
+                    &::placeholder {
+                        color: rgb(255, 255, 255);
+                    }
                     @media (max-width: 564px) {
                         width: 100%;
                         margin-bottom: 40px;
@@ -1343,11 +1359,14 @@ html, body {
                 border-bottom: 1px solid white;
                 resize: none;
                 margin-bottom: 40px;
+                &::placeholder {
+                    color: rgb(255, 255, 255);
+                }
             }
             .contact_form_send {
                 border: none;
-
-                padding: 10px 20px;
+                cursor: pointer;
+                padding: 10px 20px; 
 
                 color: rgba(255, 184, 0, 1);
                 background: #FFFFFF;
