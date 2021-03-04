@@ -1,10 +1,10 @@
 @font-face {
     font-family: Gilroy-Bold; /* Гарнитура шрифта */
-    src: url(../bilder/font/Gilroy-FREE/Gilroy-ExtraBold.otf); /* Путь к файлу со шрифтом */
+    src: url(../font/Gilroy-FREE/Gilroy-ExtraBold.otf); /* Путь к файлу со шрифтом */
    }
 @font-face {
     font-family: Gilroy; /* Гарнитура шрифта */
-    src: url(../bilder/font/Gilroy-FREE/Gilroy-Light.otf); /* Путь к файлу со шрифтом */
+    src: url(../font/Gilroy-FREE/Gilroy-Light.otf); /* Путь к файлу со шрифтом */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
@@ -292,7 +292,7 @@ html, body {
     .main_slider {
         height: 100%;
         width: 100%;
-        background: url(../bilder/img/bg1.png) center no-repeat;
+        background: url(../img/bg1.png) center no-repeat;
         background-size: cover;
         
         display: flex;
@@ -682,7 +682,7 @@ html, body {
 .main {
     height: 1014px;
     width: 100%;
-    background: url(../bilder/img/bg1.png) center no-repeat;
+    background: url(../img/bg1.png) center no-repeat;
     background-size: cover;
     
     display: flex;
@@ -943,7 +943,7 @@ html, body {
         justify-content: center;
         width: 100%;
         padding: 0 15px;
-        background: url(../bilder/img/about_us_bg.png) bottom right no-repeat;
+        background: url(../img/about_us_bg.png) bottom right no-repeat;
         // background-position-x: 100%;
         background-position-y: 300px;
         @media (max-width: 1024px) {
@@ -1057,7 +1057,7 @@ html, body {
     position: relative;
     padding-top: 100px;
 
-    background: url(../bilder/img/pornfolio_bg.png) center no-repeat;
+    background: url(../img/pornfolio_bg.png) center no-repeat;
     background-position-x: 30%;
     background-position-y: 150%;
     .portfolio_head {
@@ -1194,7 +1194,7 @@ html, body {
     height: 100%;
     width: 100%;
     min-height: 460px;
-    background: url(../bilder/img/reviews_bg.png) center no-repeat;
+    background: url(../img/reviews_bg.png) center no-repeat;
     background-size: cover;
 
     display: flex;
